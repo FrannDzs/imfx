@@ -122,8 +122,8 @@ void Lensflare::DrawHalo(RwTexture *tex, float x, float y, float w, float h, flo
         for (int i = 0; i < 4; i++) {
             float xold = ImVerts::m_Buffer[i].x;
             float yold = ImVerts::m_Buffer[i].y;
-            ImVerts::m_Buffer[i].x = x + (xold - x) * cos(angle) + (yold - y) * sin(angle);
-            ImVerts::m_Buffer[i].y = y - (xold - x) * sin(angle) + (yold - y) * cos(angle);
+            ImVerts::m_Buffer[i].x = x + (xold - x) * std::cos(angle) + (yold - y) * std::sin(angle);
+            ImVerts::m_Buffer[i].y = y - (xold - x) * std::sin(angle) + (yold - y) * std::cos(angle);
         }
     }
     RwIm2DRenderPrimitive(rwPRIMTYPETRIFAN, ImVerts::m_Buffer, 4);

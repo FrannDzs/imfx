@@ -6,7 +6,7 @@
 #include "game_sa\CWorld.h"
 #include "game_sa\CWeather.h"
 #include "game_sa\CCamera.h"
-#include <math.h>
+#include <cmath>
 
 using namespace plugin;
 
